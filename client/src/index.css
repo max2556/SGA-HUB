@@ -1,0 +1,116 @@
+@import "../node_modules/materialize-css/dist/css/materialize.min.css";
+
+/*ICONS!*/
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/*подключили Materialize*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/*Подключил шрифты из google fonts*/
+
+
+/*Comfortaa и Roboto*/
+
+input.black-input {
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    border: 2px solid #000000 !important;
+}
+
+input.black-input+label {
+    color: #000!important;
+}
+
+input.black-input:focus+label {
+    color: #000000!important;
+}
+
+input.black-input:focus {
+    border-bottom: 1px solid #000000!important;
+    box-shadow: 0 1px 0 0 #000000!important;
+}
+
+
+/*
+.header + .footer{
+    background-color: black;
+}*/
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    overflow: hidden;
+    min-height: 100vh;
+    font-family: 'Comfortaa';
+}
+
+#footer {
+    margin-top: auto;
+}
+
+#footer li {
+    padding: 0 1rem;
+}
+
+#logo-text h4 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#logo-text {
+    margin: auto;
+}
+
+#vertical-h4 {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+#SGA_Container {
+    display: flex;
+    flex-direction: column;
+}
+
+#SGA_Container div {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+
+#SGA_Container div::first-letter {
+    color: #1400FF;
+}
+
+#c-row {
+    display: flex;
+    margin-top: 20vh;
+    align-items: center;
+}
+
+.btn {
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 2px solid #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/**/
+
+.auth-btn {
+    width: 100%;
+    height: 48px;
+    font-size: 24px;
+}
+
+.auth-holder {
+    margin-top: 15vh;
+}
