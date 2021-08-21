@@ -40,7 +40,7 @@ export const LoginPage = () => {
 
           </div>
           <div className="card-action">
-            <button className="btn black auth-btn" style={{ marginRight: 10 }} >
+            <button className="btn black auth-btn flow-text" style={{ marginRight: 10 }} >
               Войти
             </button>
           </div>   

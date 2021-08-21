@@ -53,8 +53,8 @@ export const RegisterPage = () => {
 
           </div>
           <div className="card-action">
-            <button className="btn black auth-btn" style={{ marginRight: 10 }} >
-              Зарегистрироваться
+            <button className="btn black auth-btn flow-text" style={{ marginRight: 10 }} >
+              Регистрация
             </button>
           </div>   
       </div>

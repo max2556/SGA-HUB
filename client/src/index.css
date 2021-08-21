@@ -34,15 +34,23 @@ input.black-input:focus {
 }
 
 
-/*
-.header + .footer{
-    background-color: black;
-}*/
+/*main*/
 
 #root {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.container {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    /*flex на flex'e, кринж какой-то. Если что, он здесь, чтобы на главной странице круто было*/
+}
+
+.row {
+    min-width: 100%;
 }
 
 body {
@@ -103,7 +111,7 @@ body {
 }
 
 
-/**/
+/*auth*/
 
 .auth-btn {
     width: 100%;
@@ -113,4 +121,98 @@ body {
 
 .auth-holder {
     margin-top: 15vh;
+}
+
+
+/*navbar*/
+
+.ul-center {
+    margin: auto;
+}
+
+.nav-wrapper {
+    display: flex;
+}
+
+
+/*homepage*/
+
+.background-Img {
+    z-index: -1;
+    position: absolute;
+    width: 3840px;
+    height: 2160px;
+    left: -1656px;
+    top: -404px;
+    background-image: url(./content/images/ElectricCircuitBackground2.png);
+}
+
+.home-holder {
+    flex: 1 1 auto;
+}
+
+.home-holder p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0rem;
+    font-size: 24px;
+    width: 50%;
+}
+
+
+/*footer*/
+
+.SGA-footer-abbreviation span {
+    font-size: 18px;
+    color: #FFD600;
+    display: inline-block !important;
+    margin-right: 5px;
+}
+
+.abbreviation-span:first-letter {
+    color: #FF0532 !important;
+}
+
+
+/*sga-logo*/
+
+.sga-logo {
+    padding: 0px;
+    background-image: url(./content/images/sga_logo.png);
+    min-width: 36px !important;
+    min-height: 36px !important;
+}
+
+
+/*OnlineBar*/
+
+
+/*И другие Bar'ы может быть*/
+
+.bar-wrapper {
+    background-color: #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.bar-wrapper span {
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bar-body {
+    display: flex;
+    flex-direction: row;
+    background-color: #636363;
+}
+
+.bar-body p {
+    flex: auto;
+    margin: 0.5rem;
+    max-width: 10rem;
+    background-color: black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #000000;
 }

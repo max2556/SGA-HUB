@@ -11,19 +11,23 @@ export const RealNavBar = () => {
   return (
     <nav>
       <div className="nav-wrapper grey darken-4" style={{ padding: '0 2rem' }}>
-        <ul id="nav-mobile" className="hide-on-med-and-down">
+        <ul id="nav-mobile" className="left hide-on-med-and-down">
           <li>
             <NavLink to="/home">Главная</NavLink>
           </li>
           <li>
-            <NavLink to="/projects">Проеты</NavLink>
+            <NavLink to="/projects">Проекты</NavLink>
           </li>
+        </ul>
+        <ul id="nav-mobile" className="ul-center hide-on-med-and-down">
           <li>
             <NavLink to="/help"><i className="large material-icons">help_outline</i></NavLink>
           </li>
           <li>
             <NavLink to="/logout"><i className="large material-icons">exit_to_app</i></NavLink>
           </li>
+        </ul>
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <NavLink to="/chat">Чат</NavLink>
           </li>
