@@ -106,7 +106,6 @@ body {
     text-align: center;
     box-sizing: border-box;
     border-radius: 6px;
-    border: 2px solid #000000;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -114,6 +113,7 @@ body {
 /*auth*/
 
 .auth-btn {
+    border: 2px solid #000000;
     width: 100%;
     height: 48px;
     font-size: 24px;
@@ -132,6 +132,10 @@ body {
 
 .nav-wrapper {
     display: flex;
+}
+
+.navbar-icons {
+    font-size: 3rem !important;
 }
 
 
@@ -197,7 +201,7 @@ body {
 
 .bar-wrapper span {
     vertical-align: middle;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -215,4 +219,62 @@ body {
     box-sizing: border-box;
     border-radius: 15px;
     border: 1px solid #000000;
+}
+
+
+/*ProjectsMainPage*/
+
+.my-projects-btn {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-size: 36px;
+    min-height: 4rem;
+}
+
+.search-row {
+    display: flex;
+    flex-direction: row;
+    min-width: 70% !important;
+    max-width: 90% !important;
+    margin-left: 1rem;
+}
+
+.search-btn {
+    margin: auto;
+    margin-right: 1rem;
+    min-height: 3rem;
+    font-size: 24px;
+}
+
+.search-field {
+    flex: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+/*wb field*/
+
+.white-black-field {
+    background-color: white;
+    color: black;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+
+.white-black-field input {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+
+/*PopularIndustries component*/
+
+.industry-icon {
+    padding-top: 2rem;
+    min-height: 7rem;
+    min-width: 7rem;
+    max-width: 7rem !important;
+    text-align: center;
+    color: white;
 }

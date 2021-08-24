@@ -21,10 +21,10 @@ export const RealNavBar = () => {
         </ul>
         <ul id="nav-mobile" className="ul-center hide-on-med-and-down">
           <li>
-            <NavLink to="/help"><i className="large material-icons">help_outline</i></NavLink>
+            <NavLink to="/help"><i className="large material-icons navbar-icons">help_outline</i></NavLink>
           </li>
           <li>
-            <NavLink to="/logout"><i className="large material-icons">exit_to_app</i></NavLink>
+            <NavLink to="/logout"><i className="large material-icons navbar-icons">exit_to_app</i></NavLink>
           </li>
         </ul>
         <ul id="nav-mobile" className="right hide-on-med-and-down">

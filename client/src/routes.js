@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
+import { ProjectsMainPage } from './pages/ProjectsMainPage'
 import { RegisterPage } from './pages/RegisterPage'
 import { WelcomePage } from './pages/WelcomePage'
 
@@ -22,6 +23,12 @@ export const useRoutes = (isAuthenticated) => {
       </Route>
       <Route path="/home">
         <HomePage></HomePage>
+      </Route>
+      <Route path="/projects">
+        <ProjectsMainPage></ProjectsMainPage>
+      </Route>
+      <Route path="/project-theme/:themeId">
+        <ProjectsMainPage></ProjectsMainPage>
       </Route>
       <Redirect to="/"></Redirect>
     </Switch>
