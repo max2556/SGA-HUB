@@ -14,8 +14,8 @@ export const FooterBar = () => {
             <p className="sga-logo circular"></p>
           </li>
           <li className="SGA-footer-abbreviation">
-            <span className="abbreviation-span">Significant </span>
-            <span className="abbreviation-span">Gamers </span>
+            <span className="abbreviation-span">Superior </span>
+            <span className="abbreviation-span">Geeks </span>
             <span className="abbreviation-span">Association</span>
           </li>
           <li >

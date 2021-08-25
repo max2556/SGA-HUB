@@ -9,8 +9,8 @@ export const WelcomePage = () =>{
             <div id="logo-text" className="">
                 <h4 id="vertical-h4" className="col">HUB</h4>
                 <h4 className="col" id="SGA_Container">
-                    <div className="" style={{color: "#149CFF"}}>Significant</div>
-                    <div className="" style={{color: "#149CFF"}}>Gamers</div>
+                    <div className="" style={{color: "#149CFF"}}>Superior</div>
+                    <div className="" style={{color: "#149CFF"}}>Geeks</div>
                     <div className="" style={{color: "#149CFF"}}>Association</div>
                 </h4>
             </div>

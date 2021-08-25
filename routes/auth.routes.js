@@ -22,7 +22,8 @@ router.post("/register",
     //MiddleWare
     [ //В этом массиве описываются проверки данных с frontEnd'a, в данном случае, для регистрации мы проверяем Email и пароль
         check("email", "Некорректный адрес электронной почты").isEmail(),
-        check("password", "Не соблюдены минимальные требования к паролю").isLength({ min: 6 })
+        check("password", "Не соблюдены минимальные требования к паролю").isLength({ min: 6 }),
+        check("nickname", "Имя слишком длинное/короткое").isLength({ min: 3, max: 20 })
     ],
     async(req, res) => {
         try {
@@ -34,13 +35,17 @@ router.post("/register",
             //Ууу, сука Errors.isEmpty() - это метод!, писать errors.isEmpty - ошибка, в нем нет такого поля
             if (!errors.isEmpty()) { return res.status(400).json({ errors: errors.array(), message: "Ошибка при регистрации - некоректные данные" }); }
 
-            const { email, password } = req.body; //Получаем из request'a емаил и пароль
-            const candidate = await User.findOne({ email: email }); //Проверяем, есть ли уже в базе такой емаил
+            const { email, password, nickname } = req.body; //Получаем из request'a емаил и пароль
+            const candidate_email = await User.findOne({ email: email }); //Проверяем, есть ли уже в базе такой емаил
+            const candidate_nickname = await User.findOne({ nickname: nickname });
 
-            if (candidate) return res.status(400).json({ message: "Пользователь с таким Email'ом уже существует" }); //Если да - выдать ошибку
+
+            if (candidate_email) return res.status(400).json({ message: "Пользователь с таким Email'ом уже существует" }); //Если да - выдать ошибку
+            if (candidate_nickname) return res.status(400).json({ message: "Пользователь с таким именем уже существует" });
+
 
             const hashedPassword = await bcrypt.hash(password, cryptSalt);
-            const user = new User({ email: email, password: hashedPassword });
+            const user = new User({ email: email, password: hashedPassword, nickname: nickname });
 
             await user.save();
             res.status(201).json({ message: "Пользователь успешно создан" });

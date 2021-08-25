@@ -6,6 +6,11 @@ export const RealNavBar = () => {
   const auth = useContext(AuthContext) //Сам логаут идет из контекста
   const history = useHistory()
   //Функция логаута
+  const logoutHandler = (e) => {
+    e.preventDefault()
+    auth.logout()
+    history.push('/')
+  }
 
   //NavBar взят с materialize
   return (
@@ -24,7 +29,7 @@ export const RealNavBar = () => {
             <NavLink to="/help"><i className="large material-icons navbar-icons">help_outline</i></NavLink>
           </li>
           <li>
-            <NavLink to="/logout"><i className="large material-icons navbar-icons">exit_to_app</i></NavLink>
+            <i className="large material-icons navbar-icons" onClick={logoutHandler}>exit_to_app</i>
           </li>
         </ul>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
